@@ -223,6 +223,11 @@ en:
           allow_guest_orders_false: "Require login to order"
           allow_guest_orders_true: "Allow guest checkout"
 
+    standing_orders:
+      details:
+        details: 'Details'
+
+
   home:
     hubs:
       show_closed_shops: "Show closed shops"
