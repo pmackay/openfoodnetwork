@@ -231,6 +231,7 @@ en:
           allow_guest_orders_true: "Allow guest checkout"
 
     standing_orders:
+      standing_orders: Standing Orders
       new: New Standing Order
       create: Create Standing Order
       steps:
