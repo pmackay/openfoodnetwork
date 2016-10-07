@@ -70,6 +70,7 @@ en:
   say_no: "No"
   say_yes: "Yes"
   then: then
+  ongoing: Ongoing
 
   sort_order_cycles_on_shopfront_by: "Sort Order Cycles On Shopfront By"
 
@@ -77,10 +78,12 @@ en:
   admin:
     # Common properties / models
     begins_at: Begins At
+    begins_on: Begins On
     customer: Customer
     date: Date
     email: Email
     ends_at: Ends At
+    ends_on: Ends On
     name: Name
     on_hand: On Hand
     on_demand: On Demand
