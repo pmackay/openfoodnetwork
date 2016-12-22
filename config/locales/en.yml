@@ -245,6 +245,10 @@ en:
           enable_standing_orders_tip: "Enable standing/repeating order functionality?"
           enable_standing_orders_false: "Disabled"
           enable_standing_orders_true: "Enabled"
+          allow_order_changes: "Change orders"
+          allow_order_changes_tip: "Allow customers to change their order as long the order cycle is open."
+          allow_order_changes_false: "Placed orders cannot be changed"
+          allow_order_changes_true: "Customers can remove items from an order of an open order cycle"
 
     standing_orders:
       standing_orders: Standing Orders
@@ -276,13 +280,25 @@ en:
       unpause_failure_msg: 'Sorry, unpausing failed!'
       order_update_issues_msg: Some orders could not be automatically updated, this is most likely because they have been manually edited. Please review the issues listed below and make any adjustments to individual orders if required.
 
-
+# Frontend views
+#
+# These keys are referenced relatively like `t('.message')` in
+# app/views/checkout/_already_ordered.html.haml.
+#
+  checkout:
+    already_ordered:
+      cart: "cart"
+      message_html: "You have an order for this order cycle already. Check the %{cart} to see the items you ordered before. You can also cancel items as long as the order cycle is open."
   home:
     hubs:
       show_closed_shops: "Show closed shops"
       hide_closed_shops: "Hide closed shops"
       show_on_map: "Show all on the map"
   shared:
+    menu:
+      cart:
+        checkout: "Checkout now"
+        already_ordered_products: "Already ordered in this order cycle"
     register_call:
       selling_on_ofn: "Interested in getting on the Open Food Network?"
       register: "Register here"
@@ -360,7 +376,6 @@ en:
   items: "items"
   cart_headline: "Your shopping cart"
   total: "Total"
-  checkout: "Checkout now"
   cart_updating: "Updating cart..."
   cart_empty: "Cart empty"
   cart_edit: "Edit your cart"
@@ -368,15 +383,6 @@ en:
   card_number: Card Number
   card_securitycode: "Security Code"
   card_expiry_date: Expiry Date
-
-  ofn_cart_headline: "Current cart for:"
-  ofn_cart_distributor: "Distributor:"
-  ofn_cart_oc: "Order cycle:"
-  ofn_cart_from: "From:"
-  ofn_cart_to: "To:"
-  ofn_cart_product: "Product:"
-  ofn_cart_quantitiy: "Quantity:"
-  ofn_cart_send: "Buy me"
 
   ie_warning_headline: "Your browser is out of date :-("
   ie_warning_text: "For the best Open Food Network experience, we strongly recommend upgrading your browser:"
@@ -1163,6 +1169,9 @@ Please follow the instructions there to make your enterprise visible on the Open
       format: ! '%Y-%m-%d'
       js_format: 'yy-mm-dd'
     zipcode: Postcode
+    orders:
+      bought:
+        item: "Already ordered in this order cycle"
     shipment_states:
       backorder: backorder
       partial: partial
